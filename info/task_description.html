@@ -1,0 +1,24 @@
+<!-- Describe task in general -->
+<img class="for_info_only half" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" style="float: left"/>
+
+<p>
+    This is a simplified version of <a target="_blank" href={% if is_js %}"https://js.checkio.org/en/mission/fizz-buzz/"{% else %}"https://py.checkio.org/en/mission/fizz-buzz/"{% endif %}>Fizz Buzz</a> mission.
+</p>
+<p>
+    You should write a function that will receive a positive integer and return: <b class="code">"Fizz"</b> if the number is divisible by 3 or number as a string for other cases.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> {% if is_js %}A number{% else %}An integer{% endif %}.
+</p>
+
+<p>
+    <strong>Output:</strong> String.
+</p>
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
