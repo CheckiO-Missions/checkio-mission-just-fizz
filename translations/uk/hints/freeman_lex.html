@@ -1,0 +1,132 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <i>Я поняття не маю, як почати вирішувати цю місію.</i>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Це проста місія з простою ідеєю вирішення: створити перевірку однієї умови та повернути одне значення у випадку, коли значення умови <b class="code">True</b>, а в іншому випадку інше значення.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Добре, то з чого мені почати?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Перш за все, прочитай про <a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">вираз if-elif-else</a> і використай його у своєму коді: 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Гаразд. Що робити далі?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Ти можеш перевірити, як число ділиться на інше із оператором остачі <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">%</a>.
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num ділиться на n без залишку
+    ...
+        </pre>
+        <p>
+            Більш рекомендований (pythonic) запис має вигляд:
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Як саме використати це в місії?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            У випадку, якщо <b class="code">num</b> ділиться на <b class="code">3</b> без остачі, функція повинна повернути <b class="code">"Fizz"</b>. Отже, давай це напишемо:
+        </p>
+        <pre class="brush: python">
+if not num % 3:
+    return "Fizz"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Як описати інший випадок?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            В іншому випадку(коли <b class="code">num</b> НЕ ділиться без остачі на <b class="code">3</b>), функція повинна повернути <b class="code">num</b> як рядок. Якщо тобі потрібне рядкове представлення числа, використай вбудовану функцію <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Отже, як повинно виглядати моє остаточне рішення?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Тобі просто потрібно обгорнути свій код у вираз функції.
+        </p>
+        <p>Here is the whole solution:</p>
+        <pre class="brush: python">
+def checkio(num: int) -> str: 
+
+    if not num % 3:
+        return "Fizz"
+    else:
+        return str(num)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Покажи мені більше розв'язків!<br />
+        Адже я хочу стати справжнім 🥇 Python Ніндзею!</i>
+    </div>
+    <div class="answer">
+        <p>Звісно, тримай!</p>
+        <p>
+            Умова записується прямо всередині оператора return.
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    return str(num) if num % 3 else 'Fizz'
+        </pre>
+        <p>
+            Випадки беруться як елементи кортежу, де індекс є булевим (логічним) значенням остачі.
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    return ("Fizz", str(num))[bool(num % 3)]
+        </pre>
+        <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Дякую! Тепер я знаю і розумію більше! Все працює як слід!</i>
+    </div>
+    <div class="answer">
+        👍 Приємно це чути!
+    </div>
+</div>
+</body>
