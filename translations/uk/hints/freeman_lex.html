@@ -85,6 +85,7 @@ if not num % 3:
             Тобі просто потрібно обгорнути свій код у вираз функції.
         </p>
         <p>Ось повний розв'язок:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str: 
 
@@ -93,6 +94,7 @@ def checkio(num: int) -> str:
     else:
         return str(num)
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -105,19 +107,23 @@ def checkio(num: int) -> str:
         <p>
             Умова записується прямо всередині оператора return.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
     
     return str(num) if num % 3 else 'Fizz'
         </pre>
+        </div>
         <p>
             Випадки беруться як елементи кортежу, де індекс є булевим (логічним) значенням остачі.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
 
     return ("Fizz", str(num))[bool(num % 3)]
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>
