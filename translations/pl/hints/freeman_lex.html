@@ -1,0 +1,138 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            jest to prosta misja z prostym pomysłem na rozwiązanie: proszę utworzyć pojedynczy warunek sprawdzający i zwrócić jedną wartość w przypadku, gdy warunek jest <b class="code">True</b> i inną wartość w przeciwnym razie.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, od czego powinienem zacząć?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Przede wszystkim proszę poczytać o <a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-elif-else statement</a> i używać go w swoim kodzie: 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. Co robić dalej?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Mogą Państwo sprawdzić, jak liczba jest podzielna przez inną za pomocą <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% (modulo) operator</a>.
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num is evenly divisible by n
+    ...
+        </pre>
+        <p>
+            Bardziej pythonicznym sposobem jest zapisanie jako:
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak dokładnie wykorzystać to w misji?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            W przypadku, gdy <b class="code">num</b> jest podzielne przez <b class="code">3</b>, funkcja powinna zwrócić <b class="code">"Fizz"</b>. Więc proszę to napisać:
+        </p>
+        <pre class="brush: python">
+if not num % 3:
+    return "Fizz"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak napisać drugi przypadek?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            W drugim przypadku (gdy <b class="code">num</b> nie jest podzielne przez <b class="code">3</b> równo), funkcja powinna zwrócić <b class="code">num</b> jako ciąg znaków. Jeśli potrzebują Państwo łańcuchowej reprezentacji liczby, proszę użyć wbudowanej funkcji <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak więc powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę po prostu opakować swój kod w wyrażenie funkcyjne.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str: 
+
+    if not num % 3:
+        return "Fizz"
+    else:
+        return str(num)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę łapać!</p>
+        <p>
+            Warunek jest zapisany bezpośrednio wewnątrz instrukcji return.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    return str(num) if num % 3 else 'Fizz'
+        </pre>
+        </div>
+        <p>
+            Przypadki są traktowane jako elementy krotki, gdzie indeks jest wartością logiczną modulo.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    return ("Fizz", str(num))[bool(num % 3)]
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa jak należy!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>
