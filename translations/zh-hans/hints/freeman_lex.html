@@ -1,0 +1,138 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务。</p>
+    </div>
+    <div class="answer">
+        <p>
+            这是一个简单的任务，解决的想法也很简单：创建一个单一的条件检查，如果条件是<b class="code">True</b> ，就返回一个值，否则返回另一个值。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好吧，我应该从什么开始呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            首先，阅读关于<a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-elif-else statement</a> ，并在你的代码中使用它： 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            好的。接下来要做什么？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            你可以用<a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% (modulo) operator</a> ，检查一个数字是如何被另一个数字整除的。
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num is evenly divisible by n
+    ...
+        </pre>
+        <p>
+            更为pythonic的方法是写成：
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            在任务中究竟如何使用？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            如果<b class="code">num</b> 能被<b class="code">3</b> 偶数整除，该函数应该返回<b class="code">"Fizz"</b> 。所以，我们来写一下：
+        </p>
+        <pre class="brush: python">
+if not num % 3:
+    return "Fizz"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何写出其他情况？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            在其他情况下（当<b class="code">num</b> 不能被<b class="code">3</b> 匀称地除以时），该函数应返回<b class="code">num</b> 作为字符串。如果你需要一个数字的字符串表示，请使用<a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a> 内置函数。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>那么，我的最终解决方案应该是什么样子的呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你只需要把你的代码包装成函数表达式。
+        </p>
+        <p>下面是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str: 
+
+    if not num % 3:
+        return "Fizz"
+    else:
+        return str(num)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>告诉我更多的解决方案!<br />
+        因为我想成为一个真正的🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+            条件就写在返回语句里面。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    return str(num) if num % 3 else 'Fizz'
+        </pre>
+        </div>
+        <p>
+            案例被当作元组的元素，其中索引是modulo的布尔值。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    return ("Fizz", str(num))[bool(num % 3)]
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>谢谢!我现在知道并理解了更多!一切工作都很顺利!</p>
+    </div>
+    <div class="answer">
+        👍很高兴听到这个消息!
+    </div>
+</div>
+</body>
