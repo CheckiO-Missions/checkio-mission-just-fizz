@@ -1,0 +1,20 @@
+<!-- Describe task in general -->
+<img class="for_info_only half" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" style="float: left"/>
+<p>
+    你应该写一个函数，接收一个正整数并返回：<b class="code">"Fizz"</b> ，如果该数字能被3整除（3，6，9...），否则将给定的数字转换成字符串（<b class="code">2</b> -&gt;<b class="code">"2"</b> ）。
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong> {% if is_js %}一个数字<span>(number)</span>{% else %} 一个整数<span>(int)</span>{% endif %} 。
+</p>
+
+<p>
+   <strong>输出：</strong>一个{% if is_js %}字符串<span>(string)</span>{% else %} 字符串<span>(str)</span>{% endif %} 。
+</p>
+
+<p>
+    <strong>例子：</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
