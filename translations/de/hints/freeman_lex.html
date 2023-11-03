@@ -1,0 +1,138 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Dies ist eine einfache Aufgabe mit einer einfachen Lösungsidee: Erstellen Sie eine einzelne Bedingungsprüfung und geben Sie einen Wert zurück, wenn die Bedingung <b class="code">True</b> ist, und andernfalls einen anderen Wert.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, womit soll ich anfangen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Lesen Sie zunächst einmal über <a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-elif-else statement</a> und verwenden Sie es in Ihrem Code: 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. Was ist als nächstes zu tun?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie können überprüfen, wie eine Zahl durch eine andere teilbar ist, indem Sie <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% (modulo) operator</a> verwenden.
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num is evenly divisible by n
+    ...
+        </pre>
+        <p>
+            Der pythonischere Weg ist, als zu schreiben:
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie genau soll man sie in der Mission verwenden?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Für den Fall, dass <b class="code">num</b> gleichmäßig durch <b class="code">3</b> teilbar ist, sollte die Funktion <b class="code">"Fizz"</b> zurückgeben. Also, schreiben wir sie:
+        </p>
+        <pre class="brush: python">
+if not num % 3:
+    return "Fizz"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie schreibt man den anderen Fall?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Im anderen Fall (wenn <b class="code">num</b> nicht gleichmäßig durch <b class="code">3</b> teilbar ist), sollte die Funktion <b class="code">num</b> als String zurückgeben. Wenn Sie die String-Darstellung einer Zahl benötigen, verwenden Sie die integrierte Funktion <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Wie sollte also meine endgültige Lösung aussehen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen Ihren Code nur in einen Funktionsausdruck einpacken.
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str: 
+
+    if not num % 3:
+        return "Fizz"
+    else:
+        return str(num)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Zeigen Sie mir mehr Lösungen!<br />
+        denn ich will ein echter 🥇 Python-Ninjaa sein!</p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnapp sie dir!</p>
+        <p>
+            Die Bedingung wird direkt in die return-Anweisung geschrieben.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    return str(num) if num % 3 else 'Fizz'
+        </pre>
+        </div>
+        <p>
+            Die Fälle werden als Element eines Tupels genommen, wobei index der boolesche Wert von modulo ist.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    return ("Fizz", str(num))[bool(num % 3)]
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert einwandfrei!</p>
+    </div>
+    <div class="answer">
+        👍 Freut mich zu hören!
+    </div>
+</div>
+</body>
