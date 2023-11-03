@@ -1,0 +1,20 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    Sie sollten eine Funktion schreiben, die eine positive ganze Zahl empfängt und Folgendes zurückgibt: <b class="code">"Fizz"</b>, wenn die Zahl durch 3 teilbar ist (3, 6, 9 ...), andernfalls konvertieren Sie die angegebene Zahl in einen String (<b class="code">2</b> -&gt; <b class="code">"2"</b>).
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> {% if is_js %}Eine Zahl <span>(number)</span>{% else %} Eine ganze Zahl <span>(int)</span>{% endif %}.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> A {% if is_js %}string{% else %} string <span>(str)</span>{% endif %}.
+</p>
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
